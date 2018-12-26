@@ -12,9 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
+
+Route::get('/home', function (){
+    return redirect()->route('home');
+    });
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/inbox', 'HomeController@index')->name('home');
+Route::get('/compose', 'ComposeController@index')->name('compose.view');
+Route::post('/compose/store', 'ComposeController@store')->name('compose.store');
+Route::get('/inbox/message/{id}', 'MessagesController@view')->name('message.view');
+Route::get('/inbox/message-decrypt/{id}', 'MessagesController@decrypt')->name('message.decrypt');
