@@ -38,7 +38,7 @@ class MessagesController extends Controller
             return $decrypted_message;
 
         } else {
-            return 1; 
+            return 1;
         }
 
     }
