@@ -19,10 +19,12 @@ class CreateMessagesTable extends Migration
             $table->string('to');
             $table->string('from');
             $table->string('subject');
+            $table->integer('attempts');
+            $table->boolean('decrypted');
             $table->timestamps();
         });
 
-        DB::statement('ALTER TABLE `messages` ADD `message` LONGBLOB(16)');
+        DB::statement('ALTER TABLE `messages` ADD `message` VARBINARY(16)');
         DB::statement('ALTER TABLE `messages` ADD `key` VARBINARY(16)');
     }
 

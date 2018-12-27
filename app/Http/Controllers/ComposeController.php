@@ -43,6 +43,8 @@ class ComposeController extends Controller
             'from' => Auth::user()->email,
             'message'=> $encrpyted_message,
             'key'=> $key,
+            'attempts'=> 0,
+            'decrypted' =>0
 
         ]);
 

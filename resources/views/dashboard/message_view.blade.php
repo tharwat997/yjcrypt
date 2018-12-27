@@ -288,9 +288,11 @@
                                     <label for="message" class=" control-label">Message:</label>
                                     <div class="card">
                                         <div class="card-body" style="overflow: auto;">
-                                            <p>{{$message->message}}</p>
+                                            <p id="message-container">{{$message->message}}</p>
                                         </div>
+
                                     </div>
+                                    <p id="alerts-container"></p>
                                 </div>
 
 
@@ -324,6 +326,52 @@
 @section('js')
     <script type="text/javascript">
 
+        function decryptionSuccessful(messageId){
+
+            let data = {
+                'message_id': messageId,
+                '_token' : '{{ csrf_token() }}'
+            };
+
+            $.ajax({
+                url:"{{route('message.decryption.success', ['id' => $message->id])}}",
+                method:'GET',
+                data:{data:data},
+                dataType:'json',
+                success: function(response){
+                    $('#alerts-container').css('color', 'green');
+                    $('#alerts-container').html(response);
+
+                }
+            })
+
+        }
+
+        function attempts(messageId){
+
+            let data = {
+                'message_id': messageId,
+                '_token' : '{{ csrf_token() }}'
+            };
+
+            $.ajax({
+                url:"{{route('message.decryption.attempts', ['id' => $message->id])}}",
+                method:'GET',
+                data:{data:data},
+                dataType:'json',
+                success: function(response){
+
+                    $('#alerts-container').css('color', 'red');
+                    $('#alerts-container').html(response.result);
+
+                    if(response.success){
+                        window.location = response.url;
+                    }
+                }
+            })
+
+        }
+
         function decryptMessage(){
 
             let data = {
@@ -337,9 +385,15 @@
                 method:'GET',
                 data:{data:data},
                 dataType:'json',
-                success:function(data)
-                {
+                success: function(response){
+                    $('#message-container').html(response);
 
+                    decryptionSuccessful({{$message->id}});
+
+                },
+                error: function (response) {
+
+                    attempts({{$message->id}});
                 }
             })
 
