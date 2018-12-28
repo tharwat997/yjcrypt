@@ -7,7 +7,9 @@ use App\Notifications\Decrypted;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Storage;
 
 class MessagesController extends Controller
 {
@@ -32,11 +34,25 @@ class MessagesController extends Controller
 
         if ($message['key'] == $receiverKey){  //Verifies the inserted Key
 
+            //Message Section
+
             $encrypter = new Encrypter($receiverKey); //Sets the key after verification into the encrypter
 
             $decrypted_message = $encrypter->decrypt($message['message']); // Decrypts the message
 
-            return json_encode($decrypted_message) ; // returns decrypted message
+            //File Section
+
+            $encryptedFile = Storage::get($message['attachment'].'.dat'); // Get Encrypted File
+
+            $decryptedFile = $encrypter->decrypt($encryptedFile); // Decrypt the file
+
+            $fileName = $message['attachment'].'.'.$message['extension'];
+
+            Storage::disk('public')->put($fileName, $decryptedFile); // Store that file with the previous extension
+
+            $filePath = asset('storage/'.$fileName); // Get file path
+
+            return json_encode(['message' => $decrypted_message, 'file' => $filePath]) ; // returns decrypted message
 
         } else {
             return response()->json( 'error 401', 401 );  //returns error if the key doesn't match

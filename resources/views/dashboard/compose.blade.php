@@ -273,7 +273,14 @@
                     <div class="panel panel-default">
                         <div class="panel-body message">
                             <h2 class="text-center">Compose Message</h2>
-                            <form class="form-horizontal" role="form" action="{{route('compose.store')}}" method="POST">
+                            @if($errors->any())
+                                <div class="alert alert-danger">
+                                    @foreach($errors->all() as $error)
+                                        <p style="margin-bottom: 0;">{{ $error }}</p>
+                                    @endforeach
+                                </div>
+                            @endif
+                            <form class="form-horizontal" enctype="multipart/form-data" role="form" action="{{route('compose.store')}}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label for="to" class=" control-label">To:</label>
@@ -290,9 +297,9 @@
                                     <textarea class="form-control" id="message" name="message" required rows="12" placeholder="Click here to reply"></textarea>
                                 </div>
 
-                                <div class="custom-file" style="margin-bottom: 2em;">
-                                    <input type="file" class="custom-file-input" name="file" id="validatedCustomFile">
-                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                <div class="form-group">
+                                    <label for="attachment" class=" control-label">Attachment:</label>
+                                    <input type="file" name="attachment" id="attachment">
                                 </div>
 
                                 <div class="form-group">

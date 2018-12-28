@@ -19,6 +19,8 @@ class CreateMessagesTable extends Migration
             $table->string('to');
             $table->string('from');
             $table->string('subject');
+            $table->string('attachment');
+            $table->string('extension');
             $table->integer('attempts');
             $table->boolean('decrypted');
             $table->timestamps();

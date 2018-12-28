@@ -290,8 +290,8 @@
                                         <div class="card-body" style="overflow: auto;">
                                             <p id="message-container">{{$message->message}}</p>
                                         </div>
-
                                     </div>
+                                    <p id="attachment-container" style="display: none; margin-top: 1em;"><a id="attachment" href="" target="_blank" >Attachment</a></p>
                                     <p id="alerts-container"></p>
                                 </div>
 
@@ -386,7 +386,12 @@
                 data:{data:data},
                 dataType:'json',
                 success: function(response){
-                    $('#message-container').html(response);
+
+                    $('#message-container').html(response.message); // Returns decrypted message
+
+                    $('#attachment').attr("href", response.file); // Returns decrypted attachment
+
+                    $('#attachment-container').css('display', 'block'); // Displays attachment
 
                     decryptionSuccessful({{$message->id}});
 
