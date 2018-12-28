@@ -24,7 +24,11 @@
 
 <div class="content-wrapper">
     <div class="container-fluid">
-        <h2 class="text-center">Inbox</h2>
+        <div style="display: flex;flex-direction: column; justify-content: center; margin-bottom: 1em;">
+            <h2 class="text-center">Inbox</h2>
+            <h2 class="text-center">Welcome {{$userName}}</h2>
+        </div>
+
         <div class="card mb-3">
 
             <div class="card-header">

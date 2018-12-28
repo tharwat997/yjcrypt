@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Message;
 use App\Notifications\Decrypted;
+use App\User;
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
@@ -27,7 +28,6 @@ class MessagesController extends Controller
 
     public function decrypt(Request $request){
 
-
         $message = Message::find($request->data['message_id']); // Gets the message
 
         $receiverKey = hex2bin($request->data['key']); // Gets the inserted key
@@ -40,19 +40,31 @@ class MessagesController extends Controller
 
             $decrypted_message = $encrypter->decrypt($message['message']); // Decrypts the message
 
-            //File Section
+            //End Message Section
 
-            $encryptedFile = Storage::get($message['attachment'].'.dat'); // Get Encrypted File
+            if ($request->file){ // If the message has an attachment
 
-            $decryptedFile = $encrypter->decrypt($encryptedFile); // Decrypt the file
+                //File Section
 
-            $fileName = $message['attachment'].'.'.$message['extension'];
+                $encryptedFile = Storage::get($message['attachment'].'.dat'); // Get Encrypted File
 
-            Storage::disk('public')->put($fileName, $decryptedFile); // Store that file with the previous extension
+                $decryptedFile = $encrypter->decrypt($encryptedFile); // Decrypt the file
 
-            $filePath = asset('storage/'.$fileName); // Get file path
+                $fileName = $message['attachment'].'.'.$message['extension'];
 
-            return json_encode(['message' => $decrypted_message, 'file' => $filePath]) ; // returns decrypted message
+                Storage::disk('public')->put($fileName, $decryptedFile); // Store that file with the previous extension
+
+                $filePath = asset('storage/'.$fileName); // Get file path
+
+                //End File Section
+
+                return json_encode(['message' => $decrypted_message, 'file' => $filePath]) ; // returns decrypted message & File
+
+            } else {
+
+                return json_encode(['message' => $decrypted_message]) ; // returns decrypted message only
+            }
+
 
         } else {
             return response()->json( 'error 401', 401 );  //returns error if the key doesn't match
@@ -91,8 +103,9 @@ class MessagesController extends Controller
 
         $message->save();  // saves the changes
 
-        Notification::route('mail', $message->from)
-            ->notify(new Decrypted($message->from, $message->to, (string)$message->updated_at)); // Sends emails to sender that the receiver decrypted the message successfully
+        $user = User::whereemail($message->from)->first(); // Gets user
+
+        $user->notify(new Decrypted($message->from, $message->to, (string)$message->updated_at)); // Sends notification to sender that the receiver decrypted the message successfully
 
         return response()->json( 'Message successfully decrypted!'); // returns are message saying that the process if successful
 

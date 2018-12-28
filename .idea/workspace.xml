@@ -3,14 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5d5e62c1-f851-4012-a8e3-16423b28b035" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComposeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ComposeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/Decrypted.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/Decrypted.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_26_114245_create_messages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_26_114245_create_messages_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/compose.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/compose.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/message_view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/message_view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/inbox.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/inbox.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest-layout.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ComposeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ComposeController.php">
+      <file leaf-file-name="MessagesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="-34">
+              <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -39,54 +41,8 @@
       <file leaf-file-name="message_view.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/dashboard/message_view.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="368" column="21" lean-forward="true" selection-start-line="368" selection-start-column="21" selection-end-line="368" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="67" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="79" />
-              <folding>
-                <element signature="e#45#58#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compose.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/dashboard/compose.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-137">
-              <caret line="272" column="53" lean-forward="true" selection-start-line="272" selection-start-column="53" selection-end-line="272" selection-end-column="53" />
-              <folding>
-                <element signature="e#45#6506#0#HTML" />
-                <element signature="e#7101#7126#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessagesController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessagesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="79" column="15" lean-forward="true" selection-start-line="79" selection-end-line="80" />
-              <folding>
-                <element signature="e#40#56#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="340">
+              <caret line="399" lean-forward="true" selection-start-line="399" selection-end-line="399" />
             </state>
           </provider>
         </entry>
@@ -106,6 +62,9 @@
       <find>data</find>
       <find>alerts-container</find>
       <find>decryptMessage</find>
+      <find>dd(</find>
+      <find>notfi</find>
+      <find>notifi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,30 +74,30 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/guest-layout.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_25_114122_create_messages_table.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Notifications/Message.php" />
+        <option value="$PROJECT_DIR$/app/Message.php" />
+        <option value="$PROJECT_DIR$/config/filesystems.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/compose.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_12_26_114245_create_messages_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/guest-layout.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Notifications/Decrypted.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ComposeController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard/inbox.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/header.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Notifications/Message.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Notifications/Decrypted.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_12_26_114245_create_messages_table.php" />
-        <option value="$PROJECT_DIR$/app/Message.php" />
-        <option value="$PROJECT_DIR$/config/filesystems.php" />
-        <option value="$PROJECT_DIR$/resources/views/dashboard/message_view.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/dashboard/compose.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ComposeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/message_view.blade.php" />
       </list>
     </option>
   </component>
@@ -258,13 +217,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="yjcrypt" type="b2602c69:ProjectViewProjectNode" />
               <item name="yjcrypt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yjcrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yjcrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yjcrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yjcrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Notifications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yjcrypt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yjcrypt" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yjcrypt" type="b2602c69:ProjectViewProjectNode" />
@@ -304,10 +278,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="message&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/dashboard/message_view.blade.php&#10;Registe&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/RegisterController.php&#10;filesys&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/filesystems.php&#10;files&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/filesystems.php&#10;compo&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;MEssage&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Message.php&#10;messa&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/database/migrations/2018_12_26_114245_create_messages_table.php&#10;Message&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Message.php&#10;Compose&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/dashboard/compose.blade.php&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/app.php&#10;Dec&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Notifications/Decrypted.php&#10;env&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/.env&#10;composecon&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;Compos&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/includes/header.blade.php&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/database/migrations/2018_12_26_114245_create_messages_table.php&#10;homecon&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/HomeController.php&#10;inbo&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/dashboard/inbox.blade.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/RegisterController.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/includes/header.blade.php&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/layouts/app.blade.php&#10;User&#9;null&#9;null&#10;messenger&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/messenger.php&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/includes/header.blade.php&#10;logi&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/LoginController.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/routes/web.php&#10;log&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/LoginController.php&#10;home&#9;null&#9;null&#10;regist&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/RegisterController.php&#10;app.blade&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/layouts/app.blade.php&#10;Appser&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Providers/AppServiceProvider.php&#10;register&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/auth/register.blade.php&#10;appser&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="message&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/dashboard/message_view.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/includes/header.blade.php&#10;homecon&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/HomeController.php&#10;inbo&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/dashboard/inbox.blade.php&#10;Message&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/MessagesController.php&#10;env&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/.env&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/layouts/app.blade.php&#10;log&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/auth/login.blade.php&#10;comp&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/RegisterController.php&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/database/migrations/2018_12_26_114245_create_messages_table.php&#10;compose&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;Registe&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/RegisterController.php&#10;filesys&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/filesystems.php&#10;files&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/filesystems.php&#10;compo&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;MEssage&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Message.php&#10;messa&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/database/migrations/2018_12_26_114245_create_messages_table.php&#10;Compose&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/dashboard/compose.blade.php&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/app.php&#10;Dec&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Notifications/Decrypted.php&#10;composecon&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;Compos&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/ComposeController.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/includes/header.blade.php&#10;User&#9;null&#9;null&#10;messenger&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/config/messenger.php&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/includes/header.blade.php&#10;logi&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/LoginController.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/routes/web.php&#10;home&#9;null&#9;null&#10;regist&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Http/Controllers/Auth/RegisterController.php&#10;app.blade&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/layouts/app.blade.php&#10;Appser&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/app/Providers/AppServiceProvider.php&#10;register&#9;FILE&#9;file://C:/xampp/htdocs/yjcrypt/resources/views/auth/register.blade.php&#10;appser&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -351,7 +326,8 @@
       <workItem from="1545893781008" duration="3944000" />
       <workItem from="1545899153809" duration="5932000" />
       <workItem from="1545912881922" duration="7966000" />
-      <workItem from="1545986859343" duration="4996000" />
+      <workItem from="1545986859343" duration="5462000" />
+      <workItem from="1546005955310" duration="9195000" />
     </task>
     <task id="LOCAL-00001" summary="It works &lt;3">
       <created>1545840031799</created>
@@ -374,24 +350,31 @@
       <option name="project" value="LOCAL" />
       <updated>1545905270349</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="project complete">
+      <created>1545992035901</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545992035902</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54023000" />
+    <option name="totallyTimeSpent" value="63684000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="28" width="1382" height="718" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32933104" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.013722127" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32933104" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32933104" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32933104" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28517398" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -411,22 +394,22 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27231467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32933104" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32933104" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32933104" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32933104" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32933104" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +423,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="It works &lt;3" />
     <MESSAGE value="Notifications , alerts set up and working. Files are left" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notifications , alerts set up and working. Files are left" />
+    <MESSAGE value="project complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="project complete" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ComposeController.php">
@@ -488,13 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/guest-layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
@@ -508,13 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="76" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
         </state>
       </provider>
     </entry>
@@ -563,13 +533,6 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Encryption/Encrypter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -579,41 +542,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_25_141851_create_notifications_table.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/includes/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/inbox.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Notifications/Decrypted.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -631,29 +559,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_26_114245_create_messages_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/app/autodraw 10_29_2018.png" />
-    <entry file="file://$PROJECT_DIR$/storage/app/Ad.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/app/Ad.dat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/app/public/Vue mindmap.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/app/public/Upwork Ad.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/app/Ad.txt" />
+    <entry file="file://$PROJECT_DIR$/storage/app/Ad.dat" />
+    <entry file="file://$PROJECT_DIR$/storage/app/public/Vue mindmap.png" />
+    <entry file="file://$PROJECT_DIR$/storage/app/public/Upwork Ad.txt" />
     <entry file="file://$PROJECT_DIR$/config/filesystems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="884">
           <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
         </state>
       </provider>
@@ -665,51 +578,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_26_114245_create_messages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/compose.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="272" column="53" selection-start-line="272" selection-start-column="53" selection-end-line="272" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="67" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="79" />
+        <state relative-caret-position="323">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
           <folding>
             <element signature="e#45#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/guest-layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/inbox.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="26" column="102" selection-start-line="26" selection-start-column="102" selection-end-line="26" selection-end-column="102" />
+          <folding>
+            <element signature="e#552#642#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Notifications/Decrypted.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#li#1;n#ul#2;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#2;n#div#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ComposeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1200">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="79" column="15" lean-forward="true" selection-start-line="79" selection-end-line="80" />
+        <state relative-caret-position="-34">
+          <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/compose.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="272" column="53" lean-forward="true" selection-start-line="272" selection-start-column="53" selection-end-line="272" selection-end-column="53" />
-          <folding>
-            <element signature="e#45#6506#0#HTML" />
-            <element signature="e#7101#7126#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/message_view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="368" column="21" lean-forward="true" selection-start-line="368" selection-start-column="21" selection-end-line="368" selection-end-column="21" />
+        <state relative-caret-position="340">
+          <caret line="399" lean-forward="true" selection-start-line="399" selection-end-line="399" />
         </state>
       </provider>
     </entry>

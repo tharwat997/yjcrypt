@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="{{route('home')}}">YJcrypt</a>
+    <a style="font-size: 23px;" class="navbar-brand" href="{{route('home')}}">YJcrypt</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,6 +30,23 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item" >
+            <li class="nav-item dropdown" id="notification-dropdown" style="margin-right: 1em;">
+                <a id="notificationDropdown"  class="nav-link dropdown-toggle" href="#" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <i class="fa fa-bell"></i> <span class="badge-danger badge-pill">{{count(Auth::user()->unreadNotifications)}}</span>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown" style="overflow: auto; height: 100px;">
+                    @foreach(Auth::user()->Notifications as $notification)
+                        <li class="list-item" style="padding: 0.5em;">
+                            <span>{{$notification->data['to']}} decrypted your message</span>
+                            {{Auth::user()->unreadNotifications->markAsRead()}}
+                        </li>
+                    @endforeach
+                </ul>
+            </li>
 
             <li class="nav-item" >
                 <a class="nav-link" style="cursor: context-menu;">

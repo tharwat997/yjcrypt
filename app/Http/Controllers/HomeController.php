@@ -27,6 +27,8 @@ class HomeController extends Controller
     {
         $messages = Message::whereto(Auth::user()->email)->get();
 
-        return view('dashboard.inbox', compact('messages'));
+        $userName = Auth::user()->name;
+
+        return view('dashboard.inbox', compact('messages', 'userName'));
     }
 }

@@ -23,6 +23,10 @@
         .collapse.show{
             background: #212529;
         }
+
+        #notificationDropdown.dropdown-toggle::after{
+            display: none;
+        }
     </style>
     @yield('css')
 

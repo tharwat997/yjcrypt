@@ -36,21 +36,19 @@ class Decrypted extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
     }
 
-    /**
-     * Get the mail representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return \Illuminate\Notifications\Messages\MailMessage
-     */
-    public function toMail($notifiable)
+
+    public function toDatabase($notifiable)
     {
-        return (new MailMessage)
-            ->greeting('Hello! '.$this->from)
-            ->line($this->to.' Has successfully decrypted your message at: '.$this->updated_at)
-            ->line('Thank you for using our application!');
+
+        return [
+            'to' => $this->to,
+            'from' => $this->from,
+            'updated_at' => $this->updated_at,
+        ];
+
     }
 
     /**
