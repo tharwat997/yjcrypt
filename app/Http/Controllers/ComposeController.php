@@ -18,12 +18,16 @@ class ComposeController extends Controller
         $this->middleware('auth');
     }
 
+    public $globalKey = null;
+
 
     public function index(){
 
         $cipher = 'AES-128-CBC';
 
         $key = Encrypter::generateKey($cipher);
+
+        $this->globalKey = $key;
 
         return view('dashboard.compose')->with('key', $key);
     }
@@ -41,66 +45,73 @@ class ComposeController extends Controller
         ], $messages)->validate();
 
 
-        $key = hex2bin($request->key);
+        if ($request->key != $this->globalKey){
 
-        // Message Encryption
+            $invalidKeyErrorMessage = 'Invalid Key';
 
-        $encrypter = new Encrypter($key); // Setting Custom Key
-
-        $encrpyted_message = $encrypter->encrypt($request->message); // Message Encryption
-
-        if($request->file){ // If the message has a file attachment
-
-            // File Encryption
-
-            $file =  $request->file('attachment');
-
-            $fileContent = $file->get();
-
-            $encryptedContent = $encrypter->encrypt($fileContent);
-
-            $fileName = (pathinfo($request->file('attachment')->getClientOriginalName(), PATHINFO_FILENAME));
-
-            $fileExtension = $request->file('attachment')->getClientOriginalExtension();
-
-            Storage::put($fileName.'.dat', $encryptedContent);
-
-            // File Encryption End
-
-            $user = User::whereemail($request->to)->firstorFail(); // Getting User to send to
-
-            Message::create([
-                'to' => $user->email,
-                'subject'=> $request->subject,
-                'from' => Auth::user()->email,
-                'message'=> $encrpyted_message,
-                'key'=> $key,
-                'attempts'=> 0,
-                'decrypted' =>0,
-                'attachment' => $fileName,
-                'extension' => $fileExtension,
-            ]);
-
-            return back();
-
+            return redirect()->back()->withErrors($invalidKeyErrorMessage);
         } else {
+            $key = hex2bin($request->key);
 
-            $user = User::whereemail($request->to)->firstorFail(); // Getting User to send to
+            // Message Encryption
 
-            Message::create([
-                'to' => $user->email,
-                'subject'=> $request->subject,
-                'from' => Auth::user()->email,
-                'message'=> $encrpyted_message,
-                'key'=> $key,
-                'attempts'=> 0,
-                'decrypted' =>0,
-                'attachment' => null,
-                'extension' => null,
-            ]);
+            $encrypter = new Encrypter($key); // Setting Custom Key
 
-            return back();
+            $encrpyted_message = $encrypter->encrypt($request->message); // Message Encryption
 
+            if($request->attachment){ // If the message has a file attachment
+
+                // File Encryption
+
+                $file =  $request->file('attachment');
+
+                $fileContent = $file->get();
+
+                $encryptedContent = $encrypter->encrypt($fileContent);
+
+                $fileName = (pathinfo($request->file('attachment')->getClientOriginalName(), PATHINFO_FILENAME));
+
+                $fileExtension = $request->file('attachment')->getClientOriginalExtension();
+
+                Storage::put($fileName.'.dat', $encryptedContent);
+
+                // File Encryption End
+
+                $user = User::whereemail($request->to)->firstorFail(); // Getting User to send to
+
+                Message::create([
+                    'to' => $user->email,
+                    'subject'=> $request->subject,
+                    'from' => Auth::user()->email,
+                    'message'=> $encrpyted_message,
+                    'key'=> $key,
+                    'attempts'=> 0,
+                    'decrypted' =>0,
+                    'attachment' => $fileName,
+                    'extension' => $fileExtension,
+                ]);
+
+                return back();
+
+            } else {
+
+                $user = User::whereemail($request->to)->firstorFail(); // Getting User to send to
+
+                Message::create([
+                    'to' => $user->email,
+                    'subject'=> $request->subject,
+                    'from' => Auth::user()->email,
+                    'message'=> $encrpyted_message,
+                    'key'=> $key,
+                    'attempts'=> 0,
+                    'decrypted' =>0,
+                    'attachment' => null,
+                    'extension' => null,
+                ]);
+
+                return back();
+
+            }
         }
 
     }

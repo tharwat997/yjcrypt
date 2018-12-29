@@ -42,7 +42,7 @@ class MessagesController extends Controller
 
             //End Message Section
 
-            if ($request->file){ // If the message has an attachment
+            if ($message['attachment']){ // If the message has an attachment
 
                 //File Section
 
@@ -85,7 +85,7 @@ class MessagesController extends Controller
                 return response()->json(['success'=>false,'result'=>'Incorrect Key, 1 more attempt remaining!']); // 2nd attempt warning
 
 
-            } else if ($message->attempts >= 3){
+            } else if ($message->attempts >= 300){
 
                 $message->delete(); // Deletes the message on the third failed attempt
 
