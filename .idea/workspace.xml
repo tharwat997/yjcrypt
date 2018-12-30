@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d5e62c1-f851-4012-a8e3-16423b28b035" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComposeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ComposeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -347,7 +345,7 @@
       <workItem from="1545912881922" duration="7966000" />
       <workItem from="1545986859343" duration="5462000" />
       <workItem from="1546005955310" duration="9929000" />
-      <workItem from="1546101012670" duration="3091000" />
+      <workItem from="1546101012670" duration="3771000" />
     </task>
     <task id="LOCAL-00001" summary="It works &lt;3">
       <created>1545840031799</created>
@@ -384,11 +382,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546027825435</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Key validation and fixed attachment bug">
+      <created>1546104508231</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546104508231</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67509000" />
+    <option name="totallyTimeSpent" value="68189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -452,7 +457,8 @@
     <MESSAGE value="Notifications , alerts set up and working. Files are left" />
     <MESSAGE value="project complete" />
     <MESSAGE value="replaced email notifications with database notifications" />
-    <option name="LAST_COMMIT_MESSAGE" value="replaced email notifications with database notifications" />
+    <MESSAGE value="Add Key validation and fixed attachment bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Key validation and fixed attachment bug" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ComposeController.php">

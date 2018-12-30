@@ -44,14 +44,18 @@ class ComposeController extends Controller
             'to' => '|required|exists:users,email|max:255',
         ], $messages)->validate();
 
+            //Invalid Key Error Handling Start
 
-        if ($request->key != $this->globalKey){
+            try {
+                $key = hex2bin($request->key);
 
-            $invalidKeyErrorMessage = 'Invalid Key';
+            } catch (\ Exception $exception){
+                $invalidKeyErrorMessage = 'Invalid Key';
 
-            return redirect()->back()->withErrors($invalidKeyErrorMessage);
-        } else {
-            $key = hex2bin($request->key);
+                return redirect()->back()->withErrors($invalidKeyErrorMessage);
+            }
+            // Invalid Key Error Handling End
+
 
             // Message Encryption
 
@@ -112,7 +116,6 @@ class ComposeController extends Controller
                 return back();
 
             }
-        }
 
     }
 
